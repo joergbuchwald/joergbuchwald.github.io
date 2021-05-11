@@ -1,0 +1,17 @@
+==========
+ogs6py API
+==========
+
+.. automodule:: ogs6py
+
+.. raw:: latex
+
+    \clearpage
+
+.. toctree::
+   :hidden:
+
+   index.rst
+   classes.rst
+
+

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ogs6py.classes.timeloop &#8212; ogs6py 0.30 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ogs6py.classes.python_script" href="classes.python_script.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes.python_script.html" title="ogs6py.classes.python_script"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogs6py 0.30 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="classes.html" accesskey="U">ogs6py.classes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ogs6py.classes.timeloop</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ogs6py.classes.timeloop">
+<span id="ogs6py-classes-timeloop"></span><h1>ogs6py.classes.timeloop<a class="headerlink" href="#module-ogs6py.classes.timeloop" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>Copyright (c) 2012-2021, OpenGeoSys Community (<a class="reference external" href="http://www.opengeosys.org">http://www.opengeosys.org</a>)</dt><dd><dl class="simple">
+<dt>Distributed under a Modified BSD License.</dt><dd><p>See accompanying file LICENSE or
+<a class="reference external" href="http://www.opengeosys.org/project/license">http://www.opengeosys.org/project/license</a></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.timeloop.</span></span><span class="sig-name descname"><span class="pre">TIMELOOP</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BUILD_TREE</span></code></p>
+<p>Class managing the time loop in the project file</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addOutput">
+<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add output section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>prefix</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>suffix</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>variables</strong> (<cite>list</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>data_mode</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>compress_output</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>output_iteration_results</strong> (<cite>bool</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>meshes</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>repeat</strong> (<cite>list</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>each_steps</strong> (<cite>list</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>fixed_output_times</strong> (<cite>list</cite> or <cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addOutputPair">
+<span class="sig-name descname"><span class="pre">addOutputPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addOutputPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>add an output pair</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>repeat</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>each_steps</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addProcess">
+<span class="sig-name descname"><span class="pre">addProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addProcess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a process section to timeloop</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>process</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>convergence_type</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>abstol</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>abstols</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>reltol</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>reltols</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>norm_type</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>nonlinear_solver_name</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>time_discretization</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addTimeSteppingPair">
+<span class="sig-name descname"><span class="pre">addTimeSteppingPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addTimeSteppingPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>add a time stepping pair</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>repeat</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>delta_t</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.populateTree">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populateTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.populateTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>method to create dictionary from an xml entity</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.setStepping">
+<span class="sig-name descname"><span class="pre">setStepping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.setStepping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the time stepping</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>process</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>t_initial</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>t_end</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>repeat</strong> (<cite>int</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>delta_t</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>minimum_dt</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>maximum_dt</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>number_iterations</strong> (<cite>list</cite>) – </p></li>
+<li><p><strong>multiplier</strong> (<cite>list</cite>) – </p></li>
+<li><p><strong>dt_guess</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>dt_min</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>dt_max</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>rel_dt_max</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>rel_dt_min</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+<li><p><strong>tol</strong> (<cite>float</cite> or <cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.tree">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tree</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.tree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="classes.python_script.html"
+                        title="previous chapter">ogs6py.classes.python_script</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/classes.timeloop.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes.python_script.html" title="ogs6py.classes.python_script"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogs6py 0.30 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="classes.html" >ogs6py.classes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ogs6py.classes.timeloop</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Jörg Buchwald.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ogs6py.ogs &#8212; ogs6py 0.30 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ogs6py.classes" href="classes.html" />
+    <link rel="prev" title="Welcome to ogs6py’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes.html" title="ogs6py.classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to ogs6py’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogs6py 0.30 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ogs6py.ogs</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ogs6py.ogs">
+<span id="ogs6py-ogs"></span><h1>ogs6py.ogs<a class="headerlink" href="#module-ogs6py.ogs" title="Permalink to this headline">¶</a></h1>
+<p>ogs6py is a python-API for the OpenGeoSys finite element sofware.
+Its main functionalities include creating and altering OGS6 input files as well as executing OGS.</p>
+<dl class="simple">
+<dt>Copyright (c) 2012-2021, OpenGeoSys Community (<a class="reference external" href="http://www.opengeosys.org">http://www.opengeosys.org</a>)</dt><dd><dl class="simple">
+<dt>Distributed under a Modified BSD License.</dt><dd><p>See accompanying file LICENSE or
+<a class="reference external" href="http://www.opengeosys.org/project/license">http://www.opengeosys.org/project/license</a></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.ogs.</span></span><span class="sig-name descname"><span class="pre">OGS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for an OGS6 model.</p>
+<p>In this class everything for an OGS5 model can be specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>PROJECT_FILE</strong> (<cite>str</cite>, optional) – Filename of the output project file
+Default: default.prj</p></li>
+<li><p><strong>INPUT_FILE</strong> (<cite>str</cite>, optional) – Filename of the input project file</p></li>
+<li><p><strong>XMLSTRING</strong> (<cite>str</cite>,optional) – </p></li>
+<li><p><strong>MKL</strong> (<cite>boolean</cite>, optional) – Executes the MKL environment script
+Default: False</p></li>
+<li><p><strong>MKL_SCRIPT</strong> (<cite>str</cite>,optional) – MKL Environment command
+Default: source /opt/intel/mkl/bin/mklvars.sh intel64</p></li>
+<li><p><strong>OMP_NUM_THREADS</strong> (<cite>int</cite>, optional) – Sets the envirornvariable befaure OGS execution to restrict number of OMP Threads</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.addBlock">
+<span class="sig-name descname"><span class="pre">addBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blocktag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taglist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.addBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>General method to add a Block</p>
+<p>A block consists of an enclosing tag containing a number of
+subtags retaining a key-value structure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blocktag</strong> (<cite>str</cite>) – name of the enclosing tag</p></li>
+<li><p><strong>parent_xpath</strong> (<cite>str</cite>, optional) – XPath of the parent tag</p></li>
+<li><p><strong>taglist</strong> (<cite>list</cite>) – list of strings containing the keys</p></li>
+<li><p><strong>textlist</strong> (<cite>list</cite>) – list of strings retaining the corresponding values</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.addEntry">
+<span class="sig-name descname"><span class="pre">addEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.addEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>General method to add an Entry</p>
+<p>Entry contains of a single tag containing ‘text’,
+attributes and anttribute values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent_xpath</strong> (<cite>str</cite>, optional) – XPath of the parent tag</p></li>
+<li><p><strong>tag</strong> (<cite>str</cite>) – tag name</p></li>
+<li><p><strong>text</strong> (<cite>str</cite>) – content</p></li>
+<li><p><strong>attrib</strong> (<cite>str</cite>) – attribute keyword</p></li>
+<li><p><strong>attrib_value</strong> (<cite>str</cite>) – value of the attribute keyword</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.parseOut">
+<span class="sig-name descname"><span class="pre">parseOut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_timesteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.parseOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the logfile</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outfile</strong> (<cite>str</cite>, optional) – name of the log file
+Default: File specified already as logfile by runmodel</p></li>
+<li><p><strong>maximum_timesteps</strong> (<cite>int</cite>) – maximum number of timesteps to be taken into account</p></li>
+<li><p><strong>maximum_lines</strong> (<cite>int</cite>) – maximum number of lines to be evaluated</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replaceMediumProperty">
+<span class="sig-name descname"><span class="pre">replaceMediumProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replaceMediumProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces properties in medium (not belonging to any phase)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mediumid</strong> (<cite>int</cite>) – id of the medium</p></li>
+<li><p><strong>name</strong> (<cite>str</cite>) – property name</p></li>
+<li><p><strong>value</strong> (<cite>str</cite>/any) – value</p></li>
+<li><p><strong>propertytype</strong> (<cite>str</cite>) – type of the property</p></li>
+<li><p><strong>valuetag</strong> (<cite>str</cite>/any) – name of the tag containing the value, e.g., values
+Default: value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replaceParameter">
+<span class="sig-name descname"><span class="pre">replaceParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parametertype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replaceParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replacing parametertypes and values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<cite>str</cite>) – parametername</p></li>
+<li><p><strong>value</strong> (<cite>str</cite>) – value</p></li>
+<li><p><strong>parametertype</strong> (<cite>str</cite>) – parameter type</p></li>
+<li><p><strong>valuetag</strong> (<cite>str</cite>, optional) – name of the tag containing the value, e.g., values
+Default: value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replacePhaseProperty">
+<span class="sig-name descname"><span class="pre">replacePhaseProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AqueousLiquid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replacePhaseProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces properties in medium phases</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mediumid</strong> (<cite>int</cite>) – id of the medium</p></li>
+<li><p><strong>phase</strong> (<cite>str</cite>) – name of the phase</p></li>
+<li><p><strong>name</strong> (<cite>str</cite>) – property name</p></li>
+<li><p><strong>value</strong> (<cite>str</cite>/any) – value</p></li>
+<li><p><strong>propertytype</strong> (<cite>str</cite>) – type of the property</p></li>
+<li><p><strong>valuetag</strong> (<cite>str</cite>/any) – name of the tag containing the value, e.g., values
+Default: value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replaceTxt">
+<span class="sig-name descname"><span class="pre">replaceTxt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occurrence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replaceTxt" title="Permalink to this definition">¶</a></dt>
+<dd><p>General method for replacing text between obening and closing tags</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<cite>str</cite>/<cite>any</cite>) – Text</p></li>
+<li><p><strong>xpath</strong> (<cite>str</cite>, optional) – XPath of the tag</p></li>
+<li><p><strong>occurrence</strong> (<cite>int</cite>, optional) – Easy way to adress nonunique XPath addresses by their occurece
+from the top of the XML file
+Default: -1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.runModel">
+<span class="sig-name descname"><span class="pre">runModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.runModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to run OGS.</p>
+<p>Runs OGS with the project file specified as PROJECT_FILE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>LOGFILE</strong> (<cite>str</cite>, optional) – Name of the file to write STDOUT of ogs
+Default: out</p></li>
+<li><p><strong>path</strong> (<cite>str</cite>, optional) – Path of the directory in which the ogs executable can be found</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.writeInput">
+<span class="sig-name descname"><span class="pre">writeInput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.writeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the projectfile to disk</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to ogs6py’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="classes.html"
+                        title="next chapter">ogs6py.classes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ogs_base.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes.html" title="ogs6py.classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to ogs6py’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogs6py 0.30 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ogs6py.ogs</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Jörg Buchwald.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+    </div>
+  </body>
+</html>
