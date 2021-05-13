@@ -172,12 +172,22 @@ any points in and and time within the simulation domain.</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">PVDIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">PVDIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for handling I/O of PVD files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>nneighbors</strong> (<cite>int</cite>, optional) – </p></li>
+<li><p><strong>dim</strong> (<cite>int</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.clearPVDrelpath">
-<span class="sig-name descname"><span class="pre">clearPVDrelpath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.clearPVDrelpath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.clearPVDRelPath">
+<span class="sig-name descname"><span class="pre">clearPVDRelPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.clearPVDRelPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete relative directory paths in the vtu filenames of the PVD file.</p>
 </dd></dl>
 
@@ -185,88 +195,174 @@ any points in and and time within the simulation domain.</p>
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.readPVD">
 <span class="sig-name descname"><span class="pre">readPVD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readPVD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read in PVD file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<cite>str</cite>) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.readPointSetData">
-<span class="sig-name descname"><span class="pre">readPointSetData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readPointSetData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readPointSetData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readPointSetData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data of field “fieldname” at time “timestep” alon a given “pointsetarray”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestep</strong> (<cite>int</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pointsetarray</strong> (<cite>array</cite>, optional) – default: [(0,0,0)]</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>) – default: ‘linear’</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.readTimeSeries">
-<span class="sig-name descname"><span class="pre">readTimeSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readTimeSeries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readTimeSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readTimeSeries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return time series data of field “fieldname” at points pts.
 Also a list of fieldnames can be provided as “fieldname”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pts</strong> (<cite>dict</cite>, optional) – default: {‘pt0’: (0.0,0.0,0.0)}</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.readTimeStep">
 <span class="sig-name descname"><span class="pre">readTimeStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.readTimeStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print field “fieldname” at time “timestep”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestep</strong> (<cite>int</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">VTUIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">VTUIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for handling I/O of VTU files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>nneighbors</strong> (<cite>int</cite>, optional) – default: 20</p></li>
+<li><p><strong>dim</strong> (<cite>int</cite>, optional) – default: 3</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.func2Field">
 <span class="sig-name descname"><span class="pre">func2Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.func2Field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a field to the vtu file (which will be saved directly as “ofilename”
 by providing a three argument function(x,y,z)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function</strong> (<cite>function</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.func2mdimField">
-<span class="sig-name descname"><span class="pre">func2mdimField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">functionarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.func2mdimField" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.func2MdimField">
+<span class="sig-name descname"><span class="pre">func2MdimField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">functionarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.func2MdimField" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a multidimensional field to the vtu file (which will be saved directly as “ofilename”
 by providing am array of three argument functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>functionarray</strong> (<cite>array</cite> of objects) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getData">
-<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get interpolated data for points_interpol using “neighbors” points.</p>
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get interpolated data for points_interpol using neighbor points.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getField">
 <span class="sig-name descname"><span class="pre">getField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getField" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return vtu point field as numpy array.</p>
+<dd><p>Return vtu point field as numpy array.
+fieldname : <cite>str</cite></p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getFieldnames">
-<span class="sig-name descname"><span class="pre">getFieldnames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getFieldnames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getFieldNames">
+<span class="sig-name descname"><span class="pre">getFieldNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getFieldNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get names of all point fields in the vtu file.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getNeighbors">
 <span class="sig-name descname"><span class="pre">getNeighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getNeighbors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method for obtaining neighbors for interpolation</p>
+<dd><p>Method for obtaining neighbor points for interpolation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getPointData">
-<span class="sig-name descname"><span class="pre">getPointData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getPointData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getPointData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getPointData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data of field “fieldname” at all points specified in “pts”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pts</strong> (<cite>dict</cite>, optional) – default: {‘pt0’: (0.0,0.0,0.0)}</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear’</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.getPointSetData">
-<span class="sig-name descname"><span class="pre">getPointSetData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getPointSetData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getPointSetData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.getPointSetData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data specified in fieldname at all points specified in “pointsetarray”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pointsetarray</strong> (<cite>list</cite>, optional) – default: [(0,0,0)]</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear’</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.pointdata2celldata">
-<span class="sig-name descname"><span class="pre">pointdata2celldata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.pointdata2celldata" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.pointData2CellData">
+<span class="sig-name descname"><span class="pre">pointData2CellData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.pointData2CellData" title="Permalink to this definition">¶</a></dt>
 <dd><p>convert pointdata to cell data of field “fieldname”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -274,6 +370,15 @@ by providing am array of three argument functions.</p>
 <span class="sig-name descname"><span class="pre">writeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.writeField" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a field (numpy array of correct size)
 to field “fieldname” as file “ofilename”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> (<cite>array</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
