@@ -185,13 +185,13 @@
 </dd>
 </dl>
 <dl class="py class">
-<dt class="sig sig-object py" id="ogs6py.classes.processvars.PROCESSVARS">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.processvars.</span></span><span class="sig-name descname"><span class="pre">PROCESSVARS</span></span><a class="headerlink" href="#ogs6py.classes.processvars.PROCESSVARS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BUILD_TREE</span></code></p>
+<dt class="sig sig-object py" id="ogs6py.classes.processvars.ProcessVars">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.processvars.</span></span><span class="sig-name descname"><span class="pre">ProcessVars</span></span><a class="headerlink" href="#ogs6py.classes.processvars.ProcessVars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BuildTree</span></code></p>
 <p>Managing the process variables section in the project file.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.processvars.PROCESSVARS.addBC">
-<span class="sig-name descname"><span class="pre">addBC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.PROCESSVARS.addBC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.processvars.ProcessVars.add_bc">
+<span class="sig-name descname"><span class="pre">add_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.ProcessVars.add_bc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a boundary condition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -210,8 +210,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.processvars.PROCESSVARS.addST">
-<span class="sig-name descname"><span class="pre">addST</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.PROCESSVARS.addST" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.processvars.ProcessVars.add_st">
+<span class="sig-name descname"><span class="pre">add_st</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.ProcessVars.add_st" title="Permalink to this definition">¶</a></dt>
 <dd><p>add a source term</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -230,14 +230,14 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.processvars.PROCESSVARS.populateTree">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populateTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.PROCESSVARS.populateTree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.processvars.ProcessVars.populate_tree">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populate_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.ProcessVars.populate_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>method to create dictionary from an xml entity</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.processvars.PROCESSVARS.setIC">
-<span class="sig-name descname"><span class="pre">setIC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.PROCESSVARS.setIC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.processvars.ProcessVars.set_ic">
+<span class="sig-name descname"><span class="pre">set_ic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.processvars.ProcessVars.set_ic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set initial conditions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

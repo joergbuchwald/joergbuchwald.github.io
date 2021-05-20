@@ -184,13 +184,13 @@
 </dd>
 </dl>
 <dl class="py class">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.timeloop.</span></span><span class="sig-name descname"><span class="pre">TIMELOOP</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BUILD_TREE</span></code></p>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.timeloop.</span></span><span class="sig-name descname"><span class="pre">TimeLoop</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BuildTree</span></code></p>
 <p>Class managing the time loop in the project file</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addOutput">
-<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addOutput" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.add_output">
+<span class="sig-name descname"><span class="pre">add_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.add_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add output section.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -212,8 +212,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addOutputPair">
-<span class="sig-name descname"><span class="pre">addOutputPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addOutputPair" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.add_output_pair">
+<span class="sig-name descname"><span class="pre">add_output_pair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.add_output_pair" title="Permalink to this definition">¶</a></dt>
 <dd><p>add an output pair</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,8 +226,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addProcess">
-<span class="sig-name descname"><span class="pre">addProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addProcess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.add_process">
+<span class="sig-name descname"><span class="pre">add_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.add_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a process section to timeloop</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,8 +247,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.addTimeSteppingPair">
-<span class="sig-name descname"><span class="pre">addTimeSteppingPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.addTimeSteppingPair" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.add_time_stepping_pair">
+<span class="sig-name descname"><span class="pre">add_time_stepping_pair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.add_time_stepping_pair" title="Permalink to this definition">¶</a></dt>
 <dd><p>add a time stepping pair</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,14 +261,14 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.populateTree">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populateTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.populateTree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.populate_tree">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populate_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.populate_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>method to create dictionary from an xml entity</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.setStepping">
-<span class="sig-name descname"><span class="pre">setStepping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.setStepping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.set_stepping">
+<span class="sig-name descname"><span class="pre">set_stepping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.set_stepping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the time stepping</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,8 +295,8 @@
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TIMELOOP.tree">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tree</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TIMELOOP.tree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.timeloop.TimeLoop.tree">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tree</span></span><a class="headerlink" href="#ogs6py.classes.timeloop.TimeLoop.tree" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

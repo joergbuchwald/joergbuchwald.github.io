@@ -185,35 +185,32 @@
 </dd>
 </dl>
 <dl class="py class">
-<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LINSOLVERS">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.linsolvers.</span></span><span class="sig-name descname"><span class="pre">LINSOLVERS</span></span><a class="headerlink" href="#ogs6py.classes.linsolvers.LINSOLVERS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BUILD_TREE</span></code></p>
+<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LinSolvers">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ogs6py.classes.linsolvers.</span></span><span class="sig-name descname"><span class="pre">LinSolvers</span></span><a class="headerlink" href="#ogs6py.classes.linsolvers.LinSolvers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ogs6py.classes.build_tree.BuildTree</span></code></p>
 <p>Class for defining a linear solvers in the project file”</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LINSOLVERS.addLinSolver">
-<span class="sig-name descname"><span class="pre">addLinSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.linsolvers.LINSOLVERS.addLinSolver" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LinSolvers.add_lin_solver">
+<span class="sig-name descname"><span class="pre">add_lin_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.linsolvers.LinSolvers.add_lin_solver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a linear solver</p>
-<p>name : <cite>str</cite>
-kind : <cite>str</cite></p>
-<blockquote>
-<div><p>one of <cite>petsc</cite>, <cite>eigen</cite> or <cite>lis</cite></p>
-</div></blockquote>
-<p>solver_type : <cite>str</cite>
-precon_type : <cite>str</cite>, optional
-max_iteration_step : <cite>int</cite>, optional
-scaling : <cite>str</cite>, optional</p>
-<blockquote>
-<div><p>1 or 0</p>
-</div></blockquote>
-<dl>
-<dt>prefix<span class="classifier"><cite>str</cite>, optional</span></dt><dd><p>required for petsc solver</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>kind</strong> (<cite>str</cite>) – one of <cite>petsc</cite>, <cite>eigen</cite> or <cite>lis</cite></p></li>
+<li><p><strong>solver_type</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>precon_type</strong> (<cite>str</cite>, optional) – </p></li>
+<li><p><strong>max_iteration_step</strong> (<cite>int</cite>, optional) – </p></li>
+<li><p><strong>scaling</strong> (<cite>str</cite>, optional) – 1 or 0</p></li>
+<li><p><strong>prefix</strong> (<cite>str</cite>, optional) – required for petsc solver</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LINSOLVERS.populateTree">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populateTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.linsolvers.LINSOLVERS.populateTree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ogs6py.classes.linsolvers.LinSolvers.populate_tree">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">populate_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.classes.linsolvers.LinSolvers.populate_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>method to create dictionary from an xml entity</p>
 </dd></dl>
 
