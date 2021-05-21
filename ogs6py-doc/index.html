@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Welcome to ogs6py’s documentation! &mdash; ogs6py 0.31 documentation</title>
+  <title>ogs6py &mdash; ogs6py 0.31 documentation</title>
   
 
   
@@ -41,7 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ogs6py.ogs" href="ogs_base.html" /> 
+    <link rel="next" title="ogs6py.ogs" href="ogs_base.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="contents.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +56,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> ogs6py
+            <a href="contents.html" class="icon icon-home"> ogs6py
           
 
           
@@ -86,8 +87,17 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ogs6py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installation">0. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#caution-naming-style-of-methods-has-changed-2021-05-20">CAUTION: naming style of methods has changed (2021-05-20)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-input-file">1. Creating a new input file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">2. Alternatively it is possible to alter existing files using the available replace methods:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#log-parser">3. Log-Parser</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ogs_base.html">ogs6py.ogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classes.html">ogs6py.classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -106,7 +116,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">ogs6py</a>
+          <a href="contents.html">ogs6py</a>
         
       </nav>
 
@@ -137,9 +147,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="contents.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to ogs6py’s documentation!</li>
+      <li>ogs6py</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,41 +168,167 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-ogs6py">
-<span id="welcome-to-ogs6py-s-documentation"></span><h1>Welcome to ogs6py’s documentation!<a class="headerlink" href="#module-ogs6py" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ogs_base.html">ogs6py.ogs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">ogs6py.classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classes.curves.html">ogs6py.classes.curves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.geo.html">ogs6py.classes.geo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.linsolvers.html">ogs6py.classes.linsolvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.local_coordinate_system.html">ogs6py.classes.local_coordinate_system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.media.html">ogs6py.classes.media</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.mesh.html">ogs6py.classes.mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.nonlinsolvers.html">ogs6py.classes.nonlinsolvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.parameters.html">ogs6py.classes.parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.processes.html">ogs6py.classes.processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.processvars.html">ogs6py.classes.processvars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.python_script.html">ogs6py.classes.python_script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.timeloop.html">ogs6py.classes.timeloop</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.31]</a></li>
-</ul>
-</li>
-</ul>
+  <a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/179541372"><img alt="DOI" src="https://zenodo.org/badge/179541372.svg" /></a>
+<div class="section" id="ogs6py">
+<h1>ogs6py<a class="headerlink" href="#ogs6py" title="Permalink to this headline">¶</a></h1>
+<p>ogs6py is a python-API for the OpenGeoSys finite element sofware.
+Its main functionalities include creating and altering OGS6 input files as well as executing OGS.
+The package allows to streamline OGS-workflows with python or Julia entirely in jupyter or pluto notebooks as demonstrated in the following video:</p>
+<a class="reference external image-reference" href="https://www.youtube.com/watch?v=eihNKjK-I-s"><img alt="video presentation of ogs6py and vtu interface" src="https://img.youtube.com/vi/eihNKjK-I-s/0.jpg" /></a>
+<p><a class="reference external" href="https://joergbuchwald.github.io/ogs6py-doc">Documentation reference</a></p>
+<p>To alter and execute OGS input, e.g., for looping over parameter ranges, two approaches exist:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">creating</span> <span class="n">a</span> <span class="n">new</span> <span class="nb">input</span> <span class="n">file</span> <span class="n">using</span> <span class="n">python</span> <span class="n">method</span> <span class="n">calls</span>
+<span class="mf">2.</span> <span class="n">altering</span> <span class="n">existing</span> <span class="nb">input</span> <span class="n">files</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+<div class="section" id="installation">
+<h1>0. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>clone the repository and use pip/pip3 to install the package.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone https://github.com/joergbuchwald/ogs6py.git</span>
+<span class="c1"># cd ogs6py</span>
+<span class="c1"># pip install --user .</span>
+</pre></div>
+</div>
+<div class="section" id="caution-naming-style-of-methods-has-changed-2021-05-20">
+<h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-a-new-input-file">
+<h3>1. Creating a new input file<a class="headerlink" href="#creating-a-new-input-file" title="Permalink to this headline">¶</a></h3>
+<p>The following example consists of a simple mechanics problem. The source file can be found in the examples directory The names of the method calls are based on the corresponing XML tags. The <code class="docutils literal notranslate"><span class="pre">MKL=True</span></code> option executes <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/opt/intel/mkl/bin/mklvars.sh</span> <span class="pre">intel64</span></code> before the ogs call.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ogs6py</span> <span class="kn">import</span> <span class="n">ogs</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">ogs</span><span class="o">.</span><span class="n">OGS</span><span class="p">(</span><span class="n">PROJECT_FILE</span><span class="o">=</span><span class="s2">&quot;simple_mechanics.prj&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">geo</span><span class="o">.</span><span class="n">add_geom</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;square_1x1.gml&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;square_1x1_quad_1e2.vtu&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processes</span><span class="o">.</span><span class="n">set_process</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;SD&quot;</span><span class="p">,</span>
+                           <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SMALL_DEFORMATION&quot;</span><span class="p">,</span>
+                           <span class="n">integration_order</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                           <span class="n">solid_density</span><span class="o">=</span><span class="s2">&quot;rho_sr&quot;</span><span class="p">,</span>
+                           <span class="n">specific_body_force</span><span class="o">=</span><span class="s2">&quot;0 0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processes</span><span class="o">.</span><span class="n">set_constitutive_relation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;LinearElasticIsotropic&quot;</span><span class="p">,</span>
+                                        <span class="n">youngs_modulus</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span>
+                                        <span class="n">poissons_ratio</span><span class="o">=</span><span class="s2">&quot;nu&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processes</span><span class="o">.</span><span class="n">add_process_variable</span><span class="p">(</span><span class="n">process_variable</span><span class="o">=</span><span class="s2">&quot;process_variable&quot;</span><span class="p">,</span>
+                                   <span class="n">process_variable_name</span><span class="o">=</span><span class="s2">&quot;displacement&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processes</span><span class="o">.</span><span class="n">add_process_variable</span><span class="p">(</span><span class="n">secondary_variable</span><span class="o">=</span><span class="s2">&quot;sigma&quot;</span><span class="p">,</span>
+                                   <span class="n">output_name</span><span class="o">=</span><span class="s2">&quot;sigma&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">timeloop</span><span class="o">.</span><span class="n">add_process</span><span class="p">(</span><span class="n">process</span><span class="o">=</span><span class="s2">&quot;SD&quot;</span><span class="p">,</span>
+                          <span class="n">nonlinear_solver_name</span><span class="o">=</span><span class="s2">&quot;basic_newton&quot;</span><span class="p">,</span>
+                          <span class="n">convergence_type</span><span class="o">=</span><span class="s2">&quot;DeltaX&quot;</span><span class="p">,</span>
+                          <span class="n">norm_type</span><span class="o">=</span><span class="s2">&quot;NORM2&quot;</span><span class="p">,</span>
+                          <span class="n">abstol</span><span class="o">=</span><span class="s2">&quot;1e-15&quot;</span><span class="p">,</span>
+                          <span class="n">time_discretization</span><span class="o">=</span><span class="s2">&quot;BackwardEuler&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">timeloop</span><span class="o">.</span><span class="n">set_stepping</span><span class="p">(</span><span class="n">process</span><span class="o">=</span><span class="s2">&quot;SD&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;FixedTimeStepping&quot;</span><span class="p">,</span>
+                           <span class="n">t_initial</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                           <span class="n">t_end</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                           <span class="n">repeat</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                           <span class="n">delta_t</span><span class="o">=</span><span class="s2">&quot;0.25&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">timeloop</span><span class="o">.</span><span class="n">add_output</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;VTK&quot;</span><span class="p">,</span>
+                         <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;blubb&quot;</span><span class="p">,</span>
+                         <span class="n">repeat</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                         <span class="n">each_steps</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                         <span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;displacement&quot;</span><span class="p">,</span> <span class="s2">&quot;sigma&quot;</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;nu&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;rho_sr&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;displacement0&quot;</span><span class="p">,</span>
+                              <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span>
+                              <span class="n">values</span><span class="o">=</span><span class="s2">&quot;0 0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dirichlet0&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dirichlet1&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Constant&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;0.05&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processvars</span><span class="o">.</span><span class="n">set_ic</span><span class="p">(</span><span class="n">process_variable_name</span><span class="o">=</span><span class="s2">&quot;displacement&quot;</span><span class="p">,</span>
+                        <span class="n">components</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="n">order</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="n">initial_condition</span><span class="o">=</span><span class="s2">&quot;displacement0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processvars</span><span class="o">.</span><span class="n">add_bc</span><span class="p">(</span><span class="n">process_variable_name</span><span class="o">=</span><span class="s2">&quot;displacement&quot;</span><span class="p">,</span>
+                        <span class="n">geometrical_set</span><span class="o">=</span><span class="s2">&quot;square_1x1_geometry&quot;</span><span class="p">,</span>
+                        <span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Dirichlet&quot;</span><span class="p">,</span>
+                        <span class="n">component</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;dirichlet0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processvars</span><span class="o">.</span><span class="n">add_bc</span><span class="p">(</span><span class="n">process_variable_name</span><span class="o">=</span><span class="s2">&quot;displacement&quot;</span><span class="p">,</span>
+                        <span class="n">geometrical_set</span><span class="o">=</span><span class="s2">&quot;square_1x1_geometry&quot;</span><span class="p">,</span>
+                        <span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Dirichlet&quot;</span><span class="p">,</span>
+                        <span class="n">component</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;dirichlet0&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">processvars</span><span class="o">.</span><span class="n">add_bc</span><span class="p">(</span><span class="n">process_variable_name</span><span class="o">=</span><span class="s2">&quot;displacement&quot;</span><span class="p">,</span>
+                        <span class="n">geometrical_set</span><span class="o">=</span><span class="s2">&quot;square_1x1_geometry&quot;</span><span class="p">,</span>
+                        <span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Dirichlet&quot;</span><span class="p">,</span>
+                        <span class="n">component</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;dirichlet1&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">nonlinsolvers</span><span class="o">.</span><span class="n">add_non_lin_solver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;basic_newton&quot;</span><span class="p">,</span>
+                                    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Newton&quot;</span><span class="p">,</span>
+                                    <span class="n">max_iter</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                                    <span class="n">linear_solver</span><span class="o">=</span><span class="s2">&quot;general_linear_solver&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">linsolvers</span><span class="o">.</span><span class="n">add_lin_solver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;general_linear_solver&quot;</span><span class="p">,</span>
+                              <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;lis&quot;</span><span class="p">,</span>
+                              <span class="n">solver_type</span><span class="o">=</span><span class="s2">&quot;cg&quot;</span><span class="p">,</span>
+                              <span class="n">precon_type</span><span class="o">=</span><span class="s2">&quot;jacobi&quot;</span><span class="p">,</span>
+                              <span class="n">max_iteration_step</span><span class="o">=</span><span class="s2">&quot;10000&quot;</span><span class="p">,</span>
+                              <span class="n">error_tolerance</span><span class="o">=</span><span class="s2">&quot;1e-16&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">linsolvers</span><span class="o">.</span><span class="n">add_lin_solver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;general_linear_solver&quot;</span><span class="p">,</span>
+                              <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;eigen&quot;</span><span class="p">,</span>
+                              <span class="n">solver_type</span><span class="o">=</span><span class="s2">&quot;CG&quot;</span><span class="p">,</span>
+                              <span class="n">precon_type</span><span class="o">=</span><span class="s2">&quot;DIAGONAL&quot;</span><span class="p">,</span>
+                              <span class="n">max_iteration_step</span><span class="o">=</span><span class="s2">&quot;10000&quot;</span><span class="p">,</span>
+                              <span class="n">error_tolerance</span><span class="o">=</span><span class="s2">&quot;1e-16&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">linsolvers</span><span class="o">.</span><span class="n">add_lin_solver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;general_linear_solver&quot;</span><span class="p">,</span>
+                              <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;petsc&quot;</span><span class="p">,</span>
+                              <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;sd&quot;</span><span class="p">,</span>
+                              <span class="n">solver_type</span><span class="o">=</span><span class="s2">&quot;cg&quot;</span><span class="p">,</span>
+                              <span class="n">precon_type</span><span class="o">=</span><span class="s2">&quot;bjacobi&quot;</span><span class="p">,</span>
+                              <span class="n">max_iteration_step</span><span class="o">=</span><span class="s2">&quot;10000&quot;</span><span class="p">,</span>
+                              <span class="n">error_tolerance</span><span class="o">=</span><span class="s2">&quot;1e-16&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">run_model</span><span class="p">(</span><span class="n">logfile</span><span class="o">=</span><span class="s2">&quot;out.log&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">runModel</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;~/github/ogs/build_mkl/bin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An example using the MPL can be find in example_THM.py.</p>
+</div>
+<div class="section" id="alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">
+<h3>2. Alternatively it is possible to alter existing files using the available replace methods:<a class="headerlink" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods" title="Permalink to this headline">¶</a></h3>
+<p>E.g., to iterate over three Young’s moduli one can use the replace parameter method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Es</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;simple_mechanics.prj&quot;</span>
+<span class="k">for</span> <span class="n">E</span> <span class="ow">in</span> <span class="n">Es</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">OGS</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">PROJECT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">MKL</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">replace_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">E</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="s2">&quot;out_E=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./time_loop/output/prefix&quot;</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">run_model</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;~/github/ogs/build_mkl/bin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Instead of the <code class="docutils literal notranslate"><span class="pre">replaceParameter</span></code> method, the more general <code class="docutils literal notranslate"><span class="pre">replaceTxt</span></code> method can be used</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./parameters/parameter[name=&#39;E&#39;]/value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The Young’s modulus in this file can also be accessed through 0’th occurrence of the place addressed by the xpath <code class="docutils literal notranslate"><span class="pre">./parameters/parameter/value</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./parameters/parameter/value&quot;</span><span class="p">,</span> <span class="n">occurrence</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For MPL based processes, there exist specific functions to set phase and medium properties: E.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_phase_property</span><span class="p">(</span><span class="n">mediumid</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="s2">&quot;Solid&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;thermal_expansivity&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;42&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for a phse property and</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_medium_property</span><span class="p">(</span><span class="n">mediumid</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;porosity&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;0.24&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for a property that lives on the medium level.</p>
+</div>
+</div>
+<div class="section" id="log-parser">
+<h2>3. Log-Parser<a class="headerlink" href="#log-parser" title="Permalink to this headline">¶</a></h2>
+<p>To parse the output that is piped into a file named <code class="docutils literal notranslate"><span class="pre">out.log</span></code> you can simply do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">parse_out</span><span class="p">(</span><span class="s2">&quot;examples/out_thm.log&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -202,6 +338,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="ogs_base.html" class="btn btn-neutral float-right" title="ogs6py.ogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="contents.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
