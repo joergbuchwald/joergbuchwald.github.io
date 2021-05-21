@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Welcome to VTUinterface’s documentation! &mdash; VTUinterface 0.67 documentation</title>
+  <title>VTUinterface API reference documentation! &mdash; VTUinterface 0.67 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="VTUinterface" href="index.html" /> 
+    <link rel="prev" title="1. reading a single VTU file" href="basic_usage_julia.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,9 +91,16 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">VTUinterface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#installation">0. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#quick-start">1. Quick start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#faq-troubleshooting">FAQ/Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to VTUinterface’s documentation!</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="index.html#faq-troubleshooting">2. FAQ/Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html">1. reading a single VTU file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html#writing-vtu-files">2. Writing VTU files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html#reading-time-series-data-from-pvd-files">3. Reading time-series data from PVD files:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html#reading-point-set-data-from-pvd-files">4. Reading point set data from PVD files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_julia.html">1. reading a single VTU file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_julia.html#writing-vtu-files">2. Writing VTU files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_julia.html#reading-time-series-data-from-pvd-files">3. Reading time-series data from PVD files:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage_julia.html#reading-point-set-data-from-pvd-files">4. Reading point set data from PVD files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VTUinterface API reference documentation!</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -146,7 +153,7 @@
     
       <li><a href="contents.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to VTUinterface’s documentation!</li>
+      <li>VTUinterface API reference documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,7 +173,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-VTUinterface.vtuIO">
-<span id="welcome-to-vtuinterface-s-documentation"></span><h1>Welcome to VTUinterface’s documentation!<a class="headerlink" href="#module-VTUinterface.vtuIO" title="Permalink to this headline">¶</a></h1>
+<span id="vtuinterface-api-reference-documentation"></span><h1>VTUinterface API reference documentation!<a class="headerlink" href="#module-VTUinterface.vtuIO" title="Permalink to this headline">¶</a></h1>
 <p>VTUinterface is a python package for easy accessing VTU/PVD files as
 outputed by Finite Element software like OpenGeoSys. It uses the VTK python
 wrapper and linear interpolation between time steps and grid points access
@@ -307,22 +314,29 @@ by providing am array of three argument functions.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data">
-<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get interpolated data for points_interpol using neighbor points.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_field">
-<span class="sig-name descname"><span class="pre">get_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_field" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_cell_field">
+<span class="sig-name descname"><span class="pre">get_cell_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_cell_field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return vtu point field as numpy array.
 fieldname : <cite>str</cite></p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_field_names">
-<span class="sig-name descname"><span class="pre">get_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_field_names" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get names of all point fields in the vtu file.</p>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_cell_field_as_point_data">
+<span class="sig-name descname"><span class="pre">get_cell_field_as_point_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_cell_field_as_point_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return vtu cell field as point field.
+fieldname : <cite>str</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_cell_field_names">
+<span class="sig-name descname"><span class="pre">get_cell_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_cell_field_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get names of all cell fields in the vtu file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get interpolated data for points_interpol using neighbor points.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -344,6 +358,19 @@ fieldname : <cite>str</cite></p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_point_field">
+<span class="sig-name descname"><span class="pre">get_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_point_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return vtu cell field as numpy array.
+fieldname : <cite>str</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_point_field_names">
+<span class="sig-name descname"><span class="pre">get_point_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_point_field_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get names of all point fields in the vtu file.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -412,7 +439,7 @@ to field “fieldname” as file “ofilename”.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="VTUinterface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="basic_usage_julia.html" class="btn btn-neutral float-left" title="1. reading a single VTU file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
