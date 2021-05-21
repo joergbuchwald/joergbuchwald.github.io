@@ -15,6 +15,7 @@ Welcome to ogs6py's documentation!
 
    ogs_base.rst
    classes.rst
+   changelog.rst
 
 .. raw:: latex
 
