@@ -167,13 +167,15 @@
            <div itemprop="articleBody">
             
   <a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/179541372"><img alt="DOI" src="https://zenodo.org/badge/179541372.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml"><img alt="ogs6py_test" src="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/joergbuchwald/ogs6py"><img alt="codecov" src="https://codecov.io/gh/joergbuchwald/ogs6py/branch/master/graph/badge.svg?token=LWID703VDU" /></a>
 <div class="section" id="ogs6py">
 <h1>ogs6py<a class="headerlink" href="#ogs6py" title="Permalink to this headline">¶</a></h1>
 <p>ogs6py is a python-API for the OpenGeoSys finite element sofware.
 Its main functionalities include creating and altering OGS6 input files as well as executing OGS.
 The package allows to streamline OGS-workflows with python or Julia entirely in jupyter or pluto notebooks as demonstrated in the following video:</p>
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=eihNKjK-I-s"><img alt="video presentation of ogs6py and vtu interface" src="https://img.youtube.com/vi/eihNKjK-I-s/0.jpg" /></a>
-<p><a class="reference external" href="https://joergbuchwald.github.io/ogs6py-doc">Documentation reference</a></p>
+<p><a class="reference external" href="https://joergbuchwald.github.io/ogs6py-doc">API reference</a></p>
 <p>To alter and execute OGS input, e.g., for looping over parameter ranges, two approaches exist:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">creating</span> <span class="n">a</span> <span class="n">new</span> <span class="nb">input</span> <span class="n">file</span> <span class="n">using</span> <span class="n">python</span> <span class="n">method</span> <span class="n">calls</span>
 <span class="mf">2.</span> <span class="n">altering</span> <span class="n">existing</span> <span class="nb">input</span> <span class="n">files</span>
@@ -311,7 +313,7 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./parameters/parameter/value&quot;</span><span class="p">,</span> <span class="n">occurrence</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For MPL based processes, there exist specific functions to set phase and medium properties: E.g.,</p>
+<p>For MPL based processes, there exist specific functions to set phase and medium properties: e.g.,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_phase_property</span><span class="p">(</span><span class="n">mediumid</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="s2">&quot;Solid&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;thermal_expansivity&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;42&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

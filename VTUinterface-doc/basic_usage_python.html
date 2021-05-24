@@ -188,7 +188,7 @@
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">dim</span></code> argument is needed for correct interpolation. By defualt <code class="docutils literal notranslate"><span class="pre">dim=3</span></code> is assumed.
 Basic VTU properties, like fieldnames, points and corresponding fielddata as provided by the unstructured grid VTK class can be simply accessed as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_field_names</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_point_field_names</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;D1_left_bottom_N1_right&#39;</span><span class="p">,</span> <span class="s1">&#39;Linear_1_to_minus1&#39;</span><span class="p">,</span> <span class="s1">&#39;pressure&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">]</span>
@@ -203,7 +203,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
        <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.</span> <span class="p">]])</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_point_field</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span> <span class="mf">2.00000000e+00</span><span class="p">,</span>  <span class="mf">0.00000000e+00</span><span class="p">],</span>
@@ -231,7 +231,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">VTUIO</span><span class="p">(</span><span class="s2">&quot;examples/square2d_random.vtu&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">vtufile</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="s2">&quot;gaussian_field_2&quot;</span><span class="p">);</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">vtufile</span><span class="o">.</span><span class="n">get_point_field</span><span class="p">(</span><span class="s2">&quot;gaussian_field_2&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">triang</span> <span class="o">=</span> <span class="n">tri</span><span class="o">.</span><span class="n">Triangulation</span><span class="p">(</span><span class="n">vtufile</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">vtufile</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
@@ -240,7 +240,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">tricontourf</span><span class="p">(</span><span class="n">triang</span><span class="p">,</span><span class="n">field</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">tri</span><span class="o">.</span><span class="n">tricontour</span><span class="o">.</span><span class="n">TriContourSet</span> <span class="n">at</span> <span class="mh">0x7f84fa66b670</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">tri</span><span class="o">.</span><span class="n">tricontour</span><span class="o">.</span><span class="n">TriContourSet</span> <span class="n">at</span> <span class="mh">0x7f81305deac0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <a class="reference external image-reference" href="output_17_1.png"><img alt="png" src="output_17_1.png" /></a>
@@ -275,7 +275,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f84fa629220</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f81302c1e80</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <a class="reference external image-reference" href="output_25_1.png"><img alt="png" src="output_25_1.png" /></a>
@@ -287,7 +287,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">VTUIO</span><span class="p">(</span><span class="s2">&quot;examples/square_1e2_pcs_0_ts_1_t_1.000000.vtu&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="s2">&quot;pressure&quot;</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vtufile</span><span class="o">.</span><span class="n">get_point_field</span><span class="p">(</span><span class="s2">&quot;pressure&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">p_size</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e6</span>
@@ -317,7 +317,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <div class="section" id="reading-time-series-data-from-pvd-files">
 <h1>3. Reading time-series data from PVD files:<a class="headerlink" href="#reading-time-series-data-from-pvd-files" title="Permalink to this headline">¶</a></h1>
 <p>Similar to reading VTU files, it is possible extract time series data from a list of vtufiles given as a PVD file. For extracting grid data at arbitrary points within the mesh, there are two methods available. The stadard method is linear interpolation between cell nodes and the other is the value of the closest node:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pvdfile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">PVDIO</span><span class="p">(</span><span class="s2">&quot;examples&quot;</span><span class="p">,</span> <span class="s2">&quot;square_1e2_pcs_0.pvd&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pvdfile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">PVDIO</span><span class="p">(</span><span class="s2">&quot;examples/square_1e2_pcs_0.pvd&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">examples</span><span class="o">/</span><span class="n">square_1e2_pcs_0</span><span class="o">.</span><span class="n">pvd</span>
@@ -380,7 +380,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f84fa491c10</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f8130186850</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <a class="reference external image-reference" href="output_48_1.png"><img alt="png" src="output_48_1.png" /></a>
