@@ -88,13 +88,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">VTUinterface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#installation">0. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#quick-start">1. Quick start</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VTUinterface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">0. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-for-vtuinterface">1. Documentation for VTUinterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">2. Quick start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#caution-naming-style-of-methods-has-changed-2021-05-20">CAUTION: naming style of methods has changed (2021-05-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq-troubleshooting">3. FAQ/Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#faq-troubleshooting">2. FAQ/Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html">1. reading a single VTU file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html#writing-vtu-files">2. Writing VTU files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_usage_python.html#reading-time-series-data-from-pvd-files">3. Reading time-series data from PVD files:</a></li>
@@ -174,16 +175,16 @@
            <div itemprop="articleBody">
             
   <a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/282728412"><img alt="DOI" src="https://zenodo.org/badge/282728412.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/joergbuchwald/VTUinterface/actions/workflows/python-package.yml"><img alt="VTUinterface" src="https://github.com/joergbuchwald/VTUinterface/actions/workflows/python-package.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/joergbuchwald/VTUinterface"><img alt="codecov" src="https://codecov.io/gh/joergbuchwald/VTUinterface/branch/master/graph/badge.svg?token=9E1OJIJI8Z" /></a>
 <div class="section" id="vtuinterface">
 <h1>VTUinterface<a class="headerlink" href="#vtuinterface" title="Permalink to this headline">¶</a></h1>
 <p>VTUinterface is a python package for easy accessing VTU/PVD files as outputed by Finite Element software like OpenGeoSys. It uses the VTK python wrapper and linear interpolation between time steps and grid points access any points in and and time within the simulation domain.</p>
-<p><a class="reference external" href="https://joergbuchwald.github.io/VTUinterface-doc">Documentation reference</a></p>
 <p>VTUinterface together with ogs6py can be viewed in action here:</p>
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=eihNKjK-I-s"><img alt="IMAGE ALT TEXT HERE" src="https://img.youtube.com/vi/eihNKjK-I-s/0.jpg" /></a>
-</div>
 <div class="section" id="installation">
-<h1>0. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>Note: VTUinterface requires the vtk wrapper for python. Alternatively, a version based on <a class="reference external" href="https://github.com/nschloe/meshio">MESHIO</a> is also under development (branch: <code class="docutils literal notranslate"><span class="pre">meshio</span></code>).
+<h2>0. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Note: VTUinterface requires the vtk wrapper for python. Alternatively, <a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/tree/meshio">a version</a> based on <a class="reference external" href="https://github.com/nschloe/meshio">MESHIO</a> is also under development.
 clone the repository and use pip to install the package</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone https://github.com/joergbuchwald/VTUinterface.git</span>
 <span class="c1"># cd VTUinterface</span>
@@ -191,24 +192,30 @@ clone the repository and use pip to install the package</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="documentation-for-vtuinterface">
+<h2>1. Documentation for VTUinterface<a class="headerlink" href="#documentation-for-vtuinterface" title="Permalink to this headline">¶</a></h2>
+<p>You can find the documentation under <a class="reference external" href="https://joergbuchwald.github.io/VTUinterface-doc/">https://joergbuchwald.github.io/VTUinterface-doc/</a></p>
+</div>
 <div class="section" id="quick-start">
-<h1>1. Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<h2>2. Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="caution-naming-style-of-methods-has-changed-2021-05-20">
 <h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_python.md">Basic Usage (python)</a></p>
 <p>Although, a python package, VTUinterface is tested to work through PyCall under julia as well:</p>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_julia.md">Basic Usage (julia)</a></p>
 </div>
-</div>
 <div class="section" id="faq-troubleshooting">
-<h1>2. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permalink to this headline">¶</a></h1>
+<h2>3. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>As the input data is triangulated with QHull for the linear interpolation it might fail at boundaries or if a wrong input dimension is given.
 Possible solutions:</p>
 <ul class="simple">
 <li><p>In order for interpolation to work correctly providing the correct dimension (set via <code class="docutils literal notranslate"><span class="pre">dim</span></code> keyword) of the problem is crucial.</p></li>
+<li><p>As the <code class="docutils literal notranslate"><span class="pre">dim</span></code> keyword specifies also the coordinates to use, VTUinterface assumes that <code class="docutils literal notranslate"><span class="pre">dim=1</span></code> refers to the x coordinate and <code class="docutils literal notranslate"><span class="pre">dim=2</span></code> implies that the problem lies in the xy-plane.</p></li>
 <li><p>For some meshes it might help to adjust the number of points taken into account by the triangulation, which can be done using the <code class="docutils literal notranslate"><span class="pre">nneighbors</span></code> keyword. Default value is 20.</p></li>
 <li><p>Especially along boundaries, linear interpolation with the QHULL method often fails, this can be resolved bei using nearest neighbor interpolation.</p></li>
 </ul>
+</div>
 </div>
 
 
