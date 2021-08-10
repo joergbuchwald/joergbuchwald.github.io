@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>ogs6py &mdash; ogs6py 0.31 documentation</title>
@@ -170,7 +171,7 @@
   <a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/179541372"><img alt="DOI" src="https://zenodo.org/badge/179541372.svg" /></a>
 <a class="reference external image-reference" href="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml"><img alt="ogs6py_test" src="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml/badge.svg" /></a>
 <a class="reference external image-reference" href="https://codecov.io/gh/joergbuchwald/ogs6py"><img alt="codecov" src="https://codecov.io/gh/joergbuchwald/ogs6py/branch/master/graph/badge.svg?token=LWID703VDU" /></a>
-<div class="section" id="ogs6py">
+<section id="ogs6py">
 <h1>ogs6py<a class="headerlink" href="#ogs6py" title="Permalink to this headline">¶</a></h1>
 <p>ogs6py is a python-API for the OpenGeoSys finite element sofware.
 Its main functionalities include creating and altering OGS6 input files as well as executing OGS.
@@ -181,7 +182,7 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 <span class="mf">2.</span> <span class="n">altering</span> <span class="n">existing</span> <span class="nb">input</span> <span class="n">files</span>
 </pre></div>
 </div>
-<div class="section" id="installation">
+<section id="installation">
 <h2>0. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>clone the repository and use pip/pip3 to install the package.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone https://github.com/joergbuchwald/ogs6py.git</span>
@@ -189,17 +190,17 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 <span class="c1"># pip install --user .</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="caution-naming-style-of-methods-has-changed-2021-05-20">
+</section>
+<section id="caution-naming-style-of-methods-has-changed-2021-05-20">
 <h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="documentation-for-ogs6py">
+</section>
+<section id="documentation-for-ogs6py">
 <h2>1. Documentation for ogs6py<a class="headerlink" href="#documentation-for-ogs6py" title="Permalink to this headline">¶</a></h2>
 <p>You can find the documentation under <a class="reference external" href="https://joergbuchwald.github.io/ogs6py-doc">https://joergbuchwald.github.io/ogs6py-doc</a></p>
-</div>
-<div class="section" id="creating-a-new-input-file">
+</section>
+<section id="creating-a-new-input-file">
 <h2>2. Creating a new input file<a class="headerlink" href="#creating-a-new-input-file" title="Permalink to this headline">¶</a></h2>
-<p>The following example consists of a simple mechanics problem. The source file can be found in the examples directory The names of the method calls are based on the corresponing XML tags. The <code class="docutils literal notranslate"><span class="pre">MKL=True</span></code> option executes <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/opt/intel/mkl/bin/mklvars.sh</span> <span class="pre">intel64</span></code> before the ogs call.</p>
+<p>The following example consists of a simple mechanics problem. The source file can be found in the examples directory The names of the method calls are based on the corresponing XML tags.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ogs6py</span> <span class="kn">import</span> <span class="n">ogs</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">ogs</span><span class="o">.</span><span class="n">OGS</span><span class="p">(</span><span class="n">PROJECT_FILE</span><span class="o">=</span><span class="s2">&quot;simple_mechanics.prj&quot;</span><span class="p">)</span>
@@ -294,8 +295,8 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 </pre></div>
 </div>
 <p>An example using the MPL can be find in example_THM.py.</p>
-</div>
-<div class="section" id="alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">
+</section>
+<section id="alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">
 <h2>3. Alternatively it is possible to alter existing files using the available replace methods:<a class="headerlink" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods" title="Permalink to this headline">¶</a></h2>
 <p>E.g., to iterate over three Young’s moduli one can use the replace parameter method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Es</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -308,7 +309,8 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
     <span class="n">model</span><span class="o">.</span><span class="n">run_model</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;~/github/ogs/build_mkl/bin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Instead of the <code class="docutils literal notranslate"><span class="pre">replace_parameter</span></code> method, the more general <code class="docutils literal notranslate"><span class="pre">replace_text</span></code> method can be used</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">MKL=True</span></code> option executes <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/opt/intel/mkl/bin/mklvars.sh</span> <span class="pre">intel64</span></code> before the ogs call.
+Instead of the <code class="docutils literal notranslate"><span class="pre">replace_parameter</span></code> method, the more general <code class="docutils literal notranslate"><span class="pre">replace_text</span></code> method can also be used to replace the young modulus in this example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./parameters/parameter[name=&#39;E&#39;]/value&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -325,15 +327,16 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 </pre></div>
 </div>
 <p>for a property that lives on the medium level.</p>
-</div>
-<div class="section" id="log-parser">
+</section>
+<section id="log-parser">
 <h2>4. Log-Parser<a class="headerlink" href="#log-parser" title="Permalink to this headline">¶</a></h2>
-<p>To parse the output that is piped into a file named <code class="docutils literal notranslate"><span class="pre">out.log</span></code> you can simply do:</p>
+<p>To parse the OGS output that is piped into a file do</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">parse_out</span><span class="p">(</span><span class="s2">&quot;examples/out_thm.log&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
+<p>which returns a pandas dataframe.</p>
+</section>
+</section>
 
 
            </div>
