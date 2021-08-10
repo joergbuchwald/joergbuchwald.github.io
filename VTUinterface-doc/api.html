@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>VTUinterface API reference documentation! &mdash; VTUinterface 0.67 documentation</title>
@@ -169,7 +170,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-VTUinterface.vtuIO">
+  <section id="module-VTUinterface.vtuIO">
 <span id="vtuinterface-api-reference-documentation"></span><h1>VTUinterface API reference documentation!<a class="headerlink" href="#module-VTUinterface.vtuIO" title="Permalink to this headline">¶</a></h1>
 <p>VTUinterface is a python package for easy accessing VTU/PVD files as
 outputed by Finite Element software like OpenGeoSys. It uses the VTK python
@@ -185,7 +186,7 @@ any points in and and time within the simulation domain.</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">PVDIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">PVDIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one_d_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_d_planenormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scipy'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for handling I/O of PVD files</p>
 <dl class="field-list simple">
@@ -194,6 +195,9 @@ any points in and and time within the simulation domain.</p>
 <li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
 <li><p><strong>nneighbors</strong> (<cite>int</cite>, optional) – </p></li>
 <li><p><strong>dim</strong> (<cite>int</cite>) – </p></li>
+<li><p><strong>one_d_axis</strong> (<cite>int</cite>) – between 0 and 2, default: 0</p></li>
+<li><p><strong>two_d_planenormal</strong> (<cite>int</cite>) – between 0 and 2, default: 2</p></li>
+<li><p><strong>interpolation_backend</strong> (<cite>str</cite>) – scipy or vtk</p></li>
 </ul>
 </dd>
 </dl>
@@ -264,7 +268,7 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">VTUIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">VTUinterface.vtuIO.</span></span><span class="sig-name descname"><span class="pre">VTUIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nneighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one_d_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_d_planenormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scipy'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for handling I/O of VTU files</p>
 <dl class="field-list simple">
@@ -273,6 +277,9 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 <li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
 <li><p><strong>nneighbors</strong> (<cite>int</cite>, optional) – default: 20</p></li>
 <li><p><strong>dim</strong> (<cite>int</cite>, optional) – default: 3</p></li>
+<li><p><strong>one_d_axis</strong> (<cite>int</cite>) – between 0 and 2, default: 0</p></li>
+<li><p><strong>two_d_planenormal</strong> (<cite>int</cite>) – between 0 and 2, default: 2</p></li>
+<li><p><strong>interpolation_backend</strong> (<cite>str</cite>) – scipy or vtk</p></li>
 </ul>
 </dd>
 </dl>
@@ -330,9 +337,22 @@ fieldname : <cite>str</cite></p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data">
-<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data_scipy">
+<span class="sig-name descname"><span class="pre">get_data_scipy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_scipy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get interpolated data for points_interpol using neighbor points.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data_vtk">
+<span class="sig-name descname"><span class="pre">get_data_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_vtk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get interpolated data for points_interpol using vtks built-in interpolation methods</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_nearest">
+<span class="sig-name descname"><span class="pre">get_nearest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary with closest mesh points
+points_interpol : <cite>dict</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -418,15 +438,15 @@ to field “fieldname” as file “ofilename”.</p>
 
 <div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="section" id="indices-and-tables">
+</section>
+<section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
+</section>
 
 
            </div>
