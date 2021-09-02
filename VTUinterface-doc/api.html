@@ -236,7 +236,7 @@ any points in and and time within the simulation domain.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.read_time_series">
-<span class="sig-name descname"><span class="pre">read_time_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.read_time_series" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_time_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.read_time_series" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return time series data of field “fieldname” at points pts.
 Also a list of fieldnames can be provided as “fieldname”</p>
 <dl class="field-list simple">
@@ -244,6 +244,7 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
 <li><p><strong>pts</strong> (<cite>dict</cite>, optional) – default: {‘pt0’: (0.0,0.0,0.0)}</p></li>
+<li><p><strong>data_type</strong> (<cite>str</cite> optional) – “point” or “cell”</p></li>
 <li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear</p></li>
 </ul>
 </dd>
@@ -283,6 +284,12 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 </ul>
 </dd>
 </dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.cell_center_points">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cell_center_points</span></span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.cell_center_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for obtaining cell center points</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.func_to_field">
 <span class="sig-name descname"><span class="pre">func_to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.func_to_field" title="Permalink to this definition">¶</a></dt>
@@ -345,8 +352,23 @@ by providing am array of three argument functions.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data of field “fieldname” at all points specified in “pts”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pts</strong> (<cite>dict</cite>, optional) – default: {‘pt0’: (0.0,0.0,0.0)}</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data_scipy">
-<span class="sig-name descname"><span class="pre">get_data_scipy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_scipy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_data_scipy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_scipy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get interpolated data for points_interpol using neighbor points.</p>
 </dd></dl>
 
@@ -369,23 +391,8 @@ by providing am array of three argument functions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_neighbors">
-<span class="sig-name descname"><span class="pre">get_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_neighbors" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_neighbors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for obtaining neighbor points for interpolation.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_point_data">
-<span class="sig-name descname"><span class="pre">get_point_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_point_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get data of field “fieldname” at all points specified in “pts”.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
-<li><p><strong>pts</strong> (<cite>dict</cite>, optional) – default: {‘pt0’: (0.0,0.0,0.0)}</p></li>
-<li><p><strong>interpolation_method</strong> (<cite>str</cite>, optional) – default: ‘linear’</p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
