@@ -248,11 +248,6 @@ attributes and anttribute values</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.ogs.OGS.get_medium_pointer">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">get_medium_pointer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mediumid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.get_medium_pointer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.parse_out">
 <span class="sig-name descname"><span class="pre">parse_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_timesteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">petsc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.parse_out" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses the logfile</p>
@@ -276,6 +271,22 @@ Default: File specified already as logfile by runmodel</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>xpath</strong> (<cite>str</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_block_by_include">
+<span class="sig-name descname"><span class="pre">replace_block_by_include</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'include.xml'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occurrence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_block_by_include" title="Permalink to this definition">¶</a></dt>
+<dd><p>General method for replacing a block by an include</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<cite>str</cite>, optional) – XPath of the tag</p></li>
+<li><p><strong>filename</strong> (<cite>str</cite>, optional) – </p></li>
+<li><p><strong>occurrence</strong> (<cite>int</cite>, optional) – Addresses nonunique XPath by their occurece
+Default: 0</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -376,6 +387,7 @@ Default: -1</p></li>
 <li><p><strong>logfile</strong> (<cite>str</cite>, optional) – Name of the file to write STDOUT of ogs
 Default: out</p></li>
 <li><p><strong>path</strong> (<cite>str</cite>, optional) – Path of the directory in which the ogs executable can be found</p></li>
+<li><p><strong>args</strong> (<cite>str</cite>, optional) – additional arguments for the ogs executable</p></li>
 </ul>
 </dd>
 </dl>

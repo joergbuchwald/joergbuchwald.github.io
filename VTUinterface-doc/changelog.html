@@ -100,10 +100,14 @@
 <li class="toctree-l1"><a class="reference internal" href="api.html">VTUinterface API reference documentation!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html#indices-and-tables">Indices and tables</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">[0.67]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">[0.681]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">[0.68]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bugfixes">Bugfixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#additions">Additions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a></li>
 </ul>
 </li>
 </ul>
@@ -179,18 +183,32 @@
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <p>All notable changes to <strong>VTUinterface</strong> will be documented in this file.</p>
 <section id="id1">
-<h2>[0.67]<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>[0.681]<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="changes">
+<h3>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>new tool that enables spatial transformation of slices</p></li>
+<li><p>more functionalities to read and interpolate cell data based on cell center points</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>[0.68]<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Changes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>changes in interface to distinguish between cell data an point data</p></li>
+<li><p>filename argument of PVDIO contains now the directory argument as well (the folder keyword argument is dropped)</p></li>
+<li><p>more tests</p></li>
+<li><p>VTUinterface can deal with different orientations for 1d and 2d</p></li>
+<li><p>VTK backend is added to enable better interpolation as voronoi based interpolation in scipy often fails</p></li>
+</ul>
+</section>
 <section id="bugfixes">
 <h3>Bugfixes<a class="headerlink" href="#bugfixes" title="Permalink to this headline">¶</a></h3>
 </section>
 <section id="additions">
 <h3>Additions<a class="headerlink" href="#additions" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="changes">
-<h3>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>ogs6py uses now PEP8 naming conventionfor all ogs6py methods (lowercase with underscore separation)</p></li>
-</ul>
 </section>
 </section>
 </section>
