@@ -203,6 +203,11 @@ clone the repository and use pip to install the package</p>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_python.md">Basic Usage (python)</a></p>
 <p>Although, a python package, VTUinterface is tested to work through PyCall under julia as well:</p>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_julia.md">Basic Usage (julia)</a></p>
+<p>Unittests can be run via</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># python tests/test_vtuinterface.py</span>
+</pre></div>
+</div>
+<p>from the project root directory.</p>
 </section>
 <section id="faq-troubleshooting">
 <h2>3. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permalink to this headline">¶</a></h2>
@@ -212,7 +217,7 @@ Possible solutions:</p>
 <li><p>In order for interpolation to work correctly providing the correct dimension (set via <code class="docutils literal notranslate"><span class="pre">dim</span></code> keyword) of the problem is crucial.</p></li>
 <li><p>As the <code class="docutils literal notranslate"><span class="pre">dim</span></code> keyword specifies also the coordinates to use, VTUinterface assumes that <code class="docutils literal notranslate"><span class="pre">dim=1</span></code> refers to the x coordinate and <code class="docutils literal notranslate"><span class="pre">dim=2</span></code> implies that the problem lies in the xy-plane by default. This can be changed by specifying <code class="docutils literal notranslate"><span class="pre">one_d_axis</span></code> for one dimension or <code class="docutils literal notranslate"><span class="pre">two_d_planenormal</span></code> for two dimensions.</p></li>
 <li><p>For some meshes it might help to adjust the number of points taken into account by the triangulation, which can be done using the <code class="docutils literal notranslate"><span class="pre">nneighbors</span></code> keyword. Default value is 20.</p></li>
-<li><p>Especially along boundaries, linear interpolation with the QHULL method often fails, this can be resolved bei using nearest neighbor interpolation.</p></li>
+<li><p>Especially along boundaries, linear interpolation with the QHULL method often fails, this can be resolved by using nearest neighbor interpolation.</p></li>
 <li><p>Alternatively, you can change now the <code class="docutils literal notranslate"><span class="pre">interpolation_backend</span></code> from scipy to vtk and try out different interpolation kernels.</p></li>
 </ul>
 </section>
