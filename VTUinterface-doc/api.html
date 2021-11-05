@@ -213,17 +213,23 @@ any points in and and time within the simulation domain.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.read_point_set_data">
-<span class="sig-name descname"><span class="pre">read_point_set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.read_point_set_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get data of field “fieldname” at time “timestep” alon a given “pointsetarray”.</p>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.delete_cell_field">
+<span class="sig-name descname"><span class="pre">delete_cell_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.delete_cell_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete cell field(s) and write data to disk</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>timestep</strong> (<cite>int</cite>) – </p></li>
-<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
-<li><p><strong>pointsetarray</strong> (<cite>array</cite>, optional) – default: [(0,0,0)]</p></li>
-<li><p><strong>interpolation_method</strong> (<cite>str</cite>) – default: ‘linear’</p></li>
-</ul>
+<dd class="field-odd"><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.delete_point_field">
+<span class="sig-name descname"><span class="pre">delete_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.delete_point_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete point field(s) and write data to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -235,6 +241,22 @@ any points in and and time within the simulation domain.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filename</strong> (<cite>str</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.read_set_data">
+<span class="sig-name descname"><span class="pre">read_set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.read_set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data of field “fieldname” at time “timestep” alon a given “pointsetarray”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestep</strong> (<cite>int</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>pointsetarray</strong> (<cite>array</cite>, optional) – default: [(0,0,0)]</p></li>
+<li><p><strong>interpolation_method</strong> (<cite>str</cite>) – default: ‘linear’</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -293,6 +315,34 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.cell_center_points">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cell_center_points</span></span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.cell_center_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for obtaining cell center points</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.delete_cell_field">
+<span class="sig-name descname"><span class="pre">delete_cell_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.delete_cell_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete cell field(s) and write data to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.delete_point_field">
+<span class="sig-name descname"><span class="pre">delete_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.delete_point_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete point field(s) and write data to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -429,8 +479,8 @@ by providing am array of three argument functions.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_point_set_data">
-<span class="sig-name descname"><span class="pre">get_point_set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_point_set_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_set_data">
+<span class="sig-name descname"><span class="pre">get_set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointsetarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_set_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data specified in fieldname at all points specified in “pointsetarray”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
