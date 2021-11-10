@@ -187,11 +187,6 @@ Its main functionalities include creating and altering OGS6 input files as well 
 Default: default.prj</p></li>
 <li><p><strong>INPUT_FILE</strong> (<cite>str</cite>, optional) – Filename of the input project file</p></li>
 <li><p><strong>XMLSTRING</strong> (<cite>str</cite>,optional) – </p></li>
-<li><p><strong>MKL</strong> (<cite>boolean</cite>, optional) – Switch on execution of the MKL environment script
-before an OGS run
-Default: False</p></li>
-<li><p><strong>MKL_SCRIPT</strong> (<cite>str</cite>,optional) – MKL Environment script command
-Default: source /opt/intel/mkl/bin/mklvars.sh intel64</p></li>
 <li><p><strong>OMP_NUM_THREADS</strong> (<cite>int</cite>, optional) – Sets the envirornvariable befaure OGS execution to restrict number of OMP Threads</p></li>
 </ul>
 </dd>
@@ -249,7 +244,7 @@ attributes and anttribute values</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.parse_out">
-<span class="sig-name descname"><span class="pre">parse_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_timesteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">petsc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.parse_out" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_timesteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">petsc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupled_processes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.parse_out" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses the logfile</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -258,7 +253,8 @@ attributes and anttribute values</p>
 Default: File specified already as logfile by runmodel</p></li>
 <li><p><strong>maximum_timesteps</strong> (<cite>int</cite>) – maximum number of timesteps to be taken into account</p></li>
 <li><p><strong>maximum_lines</strong> (<cite>int</cite>) – maximum number of lines to be evaluated</p></li>
-<li><p><strong>petsc</strong> (<cite>boolean</cite>) – switch whether ogs used the petsc solver</p></li>
+<li><p><strong>petsc</strong> (<cite>boolean</cite>) – True if ogs is used with the MPI/petsc (only proc 0 output is used</p></li>
+<li><p><strong>coupled_processes</strong> (<cite>int</cite>) – Number of coupled processes in staggered scheme (1 for monolithic scheme)</p></li>
 </ul>
 </dd>
 </dl>
@@ -386,8 +382,12 @@ Default: -1</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>logfile</strong> (<cite>str</cite>, optional) – Name of the file to write STDOUT of ogs
 Default: out</p></li>
-<li><p><strong>path</strong> (<cite>str</cite>, optional) – Path of the directory in which the ogs executable can be found</p></li>
+<li><p><strong>path</strong> (<cite>str</cite>, optional) – Path of the directory in which the ogs executable can be found.
+If <code class="docutils literal notranslate"><span class="pre">container_path</span></code> is given: Path to the directory in which the
+Singularity executable can be found</p></li>
+<li><p><strong>container_path</strong> (<cite>str</cite>, optional) – Path of the OGS container file.</p></li>
 <li><p><strong>args</strong> (<cite>str</cite>, optional) – additional arguments for the ogs executable</p></li>
+<li><p><strong>wrapper</strong> (<cite>str</cite>, optional) – add a wrapper command. E.g. mpirun</p></li>
 </ul>
 </dd>
 </dl>
@@ -395,8 +395,13 @@ Default: out</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.write_input">
-<span class="sig-name descname"><span class="pre">write_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.write_input" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_includes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.write_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes the projectfile to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keep_includes</strong> (<cite>bolean</cite>, optional) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
