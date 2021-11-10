@@ -187,11 +187,6 @@ Its main functionalities include creating and altering OGS6 input files as well 
 Default: default.prj</p></li>
 <li><p><strong>INPUT_FILE</strong> (<cite>str</cite>, optional) – Filename of the input project file</p></li>
 <li><p><strong>XMLSTRING</strong> (<cite>str</cite>,optional) – </p></li>
-<li><p><strong>MKL</strong> (<cite>boolean</cite>, optional) – Switch on execution of the MKL environment script
-before an OGS run
-Default: False</p></li>
-<li><p><strong>MKL_SCRIPT</strong> (<cite>str</cite>,optional) – MKL Environment script command
-Default: source /opt/intel/mkl/bin/mklvars.sh intel64</p></li>
 <li><p><strong>OMP_NUM_THREADS</strong> (<cite>int</cite>, optional) – Sets the envirornvariable befaure OGS execution to restrict number of OMP Threads</p></li>
 </ul>
 </dd>
@@ -392,6 +387,7 @@ If <code class="docutils literal notranslate"><span class="pre">container_path</
 Singularity executable can be found</p></li>
 <li><p><strong>container_path</strong> (<cite>str</cite>, optional) – Path of the OGS container file.</p></li>
 <li><p><strong>args</strong> (<cite>str</cite>, optional) – additional arguments for the ogs executable</p></li>
+<li><p><strong>wrapper</strong> (<cite>str</cite>, optional) – add a wrapper command. E.g. mpirun</p></li>
 </ul>
 </dd>
 </dl>
