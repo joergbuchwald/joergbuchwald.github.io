@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>ogs6py &mdash; ogs6py 0.31 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ogs6py.ogs" href="ogs_base.html" />
     <link rel="prev" title="&lt;no title&gt;" href="contents.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="contents.html" class="icon icon-home"> ogs6py
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ogs6py</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">0. Installation</a></li>
@@ -96,6 +46,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-new-input-file">2. Creating a new input file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">3. Alternatively it is possible to alter existing files using the available replace methods:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#log-parser">4. Log-Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">5. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq-troubleshooting">6. FAQ/Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ogs_base.html">ogs6py.ogs</a></li>
@@ -103,76 +55,36 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="contents.html">ogs6py</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="contents.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>ogs6py</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/179541372"><img alt="DOI" src="https://zenodo.org/badge/179541372.svg" /></a>
 <a class="reference external image-reference" href="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml"><img alt="ogs6py_test" src="https://github.com/joergbuchwald/ogs6py/actions/workflows/python-package.yml/badge.svg" /></a>
 <a class="reference external image-reference" href="https://codecov.io/gh/joergbuchwald/ogs6py"><img alt="codecov" src="https://codecov.io/gh/joergbuchwald/ogs6py/branch/master/graph/badge.svg?token=LWID703VDU" /></a>
+<a class="reference external image-reference" href="https://doi.org/10.21105/joss.03673"><img alt="DOI" src="https://joss.theoj.org/papers/10.21105/joss.03673/status.svg" /></a>
 <section id="ogs6py">
-<h1>ogs6py<a class="headerlink" href="#ogs6py" title="Permalink to this headline">¶</a></h1>
+<h1>ogs6py<a class="headerlink" href="#ogs6py" title="Permalink to this heading"></a></h1>
 <p>ogs6py is a python-API for the OpenGeoSys finite element sofware.
 Its main functionalities include creating and altering OGS6 input files as well as executing OGS.
 The package allows to streamline OGS-workflows with python or Julia entirely in jupyter or pluto notebooks as demonstrated in the following video:</p>
@@ -183,7 +95,7 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 </pre></div>
 </div>
 <section id="installation">
-<h2>0. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>0. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>ogs6py can be easily installed from PyPI</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install [--user] ogs6py</span>
 </pre></div>
@@ -199,14 +111,14 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 </div>
 </section>
 <section id="caution-naming-style-of-methods-has-changed-2021-05-20">
-<h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this headline">¶</a></h2>
+<h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this heading"></a></h2>
 </section>
 <section id="documentation-for-ogs6py">
-<h2>1. Documentation for ogs6py<a class="headerlink" href="#documentation-for-ogs6py" title="Permalink to this headline">¶</a></h2>
+<h2>1. Documentation for ogs6py<a class="headerlink" href="#documentation-for-ogs6py" title="Permalink to this heading"></a></h2>
 <p>You can find the documentation under <a class="reference external" href="https://joergbuchwald.github.io/ogs6py-doc">https://joergbuchwald.github.io/ogs6py-doc</a></p>
 </section>
 <section id="creating-a-new-input-file">
-<h2>2. Creating a new input file<a class="headerlink" href="#creating-a-new-input-file" title="Permalink to this headline">¶</a></h2>
+<h2>2. Creating a new input file<a class="headerlink" href="#creating-a-new-input-file" title="Permalink to this heading"></a></h2>
 <p>The following example consists of a simple mechanics problem. The source file can be found in the examples directory The names of the method calls are based on the corresponing XML tags.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ogs6py</span> <span class="kn">import</span> <span class="n">ogs</span>
 
@@ -304,20 +216,19 @@ The package allows to streamline OGS-workflows with python or Julia entirely in 
 <p>An example using the MPL can be find in example_THM.py.</p>
 </section>
 <section id="alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods">
-<h2>3. Alternatively it is possible to alter existing files using the available replace methods:<a class="headerlink" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods" title="Permalink to this headline">¶</a></h2>
+<h2>3. Alternatively it is possible to alter existing files using the available replace methods:<a class="headerlink" href="#alternatively-it-is-possible-to-alter-existing-files-using-the-available-replace-methods" title="Permalink to this heading"></a></h2>
 <p>E.g., to iterate over three Young’s moduli one can use the replace parameter method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Es</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;simple_mechanics.prj&quot;</span>
 <span class="k">for</span> <span class="n">E</span> <span class="ow">in</span> <span class="n">Es</span><span class="p">:</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">OGS</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">PROJECT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">MKL</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">OGS</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">PROJECT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
     <span class="n">model</span><span class="o">.</span><span class="n">replace_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">E</span><span class="p">)</span>
     <span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="s2">&quot;out_E=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./time_loop/output/prefix&quot;</span><span class="p">)</span>
     <span class="n">model</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
     <span class="n">model</span><span class="o">.</span><span class="n">run_model</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;~/github/ogs/build_mkl/bin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">MKL=True</span></code> option executes <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/opt/intel/mkl/bin/mklvars.sh</span> <span class="pre">intel64</span></code> before the ogs call.
-Instead of the <code class="docutils literal notranslate"><span class="pre">replace_parameter</span></code> method, the more general <code class="docutils literal notranslate"><span class="pre">replace_text</span></code> method can also be used to replace the young modulus in this example:</p>
+<p>Instead of the <code class="docutils literal notranslate"><span class="pre">replace_parameter</span></code> method, the more general <code class="docutils literal notranslate"><span class="pre">replace_text</span></code> method can also be used to replace the young modulus in this example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">replace_text</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">xpath</span><span class="o">=</span><span class="s2">&quot;./parameters/parameter[name=&#39;E&#39;]/value&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -336,61 +247,58 @@ Instead of the <code class="docutils literal notranslate"><span class="pre">repl
 <p>for a property that lives on the medium level.</p>
 </section>
 <section id="log-parser">
-<h2>4. Log-Parser<a class="headerlink" href="#log-parser" title="Permalink to this headline">¶</a></h2>
+<h2>4. Log-Parser<a class="headerlink" href="#log-parser" title="Permalink to this heading"></a></h2>
 <p>To parse the OGS output that is piped into a file do</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">parse_out</span><span class="p">(</span><span class="s2">&quot;examples/out_thm.log&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which returns a pandas dataframe.</p>
 </section>
+<section id="examples">
+<h2>5. Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<p>There are examples that have been used in OGS workflows and may be generalized to other use cases</p>
+<ul class="simple">
+<li><p>generating an input file (prj) from a file template by reading parameters from a data file (csv),</p></li>
+<li><p>finding the optimal coupling scheme parameter for the staggered scheme.</p></li>
+</ul>
+</section>
+<section id="faq-troubleshooting">
+<h2>6. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><em>OGS exectution fails and nothing is written to the logfile.</em> Please check whether OGS is executed correctly from the terminal. A common issue is related to the fact that the interactive python environment differs from the environment in the terminal. Usually, this can be fixed by setting the required environment variables via a wrapper command. E.g., <code class="docutils literal notranslate"><span class="pre">model.run_model(wrapper=&quot;source</span> <span class="pre">/opt/intel/oneapi/setvars.sh</span> <span class="pre">intel64</span> <span class="pre">&amp;&amp;&quot;)</span></code>.</p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ogs_base.html" class="btn btn-neutral float-right" title="ogs6py.ogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="contents.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ogs_base.html" class="btn btn-neutral float-right" title="ogs6py.ogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Jörg Buchwald.
-
-    </p>
+    <p>&#169; Copyright 2021, Jörg Buchwald.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
