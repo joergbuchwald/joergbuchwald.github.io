@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ogs6py.ogs &mdash; ogs6py 0.31 documentation</title>
@@ -97,6 +97,7 @@ Default: default.prj</p></li>
 <li><p><strong>INPUT_FILE</strong> (<cite>str</cite>, optional) – Filename of the input project file</p></li>
 <li><p><strong>XMLSTRING</strong> (<cite>str</cite>,optional) – </p></li>
 <li><p><strong>OMP_NUM_THREADS</strong> (<cite>int</cite>, optional) – Sets the environmentvariable before OGS execution to restrict number of OMP Threads</p></li>
+<li><p><strong>VERBOSE</strong> (<cite>bool</cite>, optional) – Default: False</p></li>
 </ul>
 </dd>
 </dl>
@@ -120,10 +121,10 @@ subtags retaining a key-value structure</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.ogs.OGS.add_entry">
-<span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.add_entry" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.add_element">
+<span class="sig-name descname"><span class="pre">add_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.add_element" title="Permalink to this definition"></a></dt>
 <dd><p>General method to add an Entry</p>
-<p>Entry contains of a single tag containing ‘text’,
+<p>An element is a single tag containing ‘text’,
 attributes and anttribute values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
