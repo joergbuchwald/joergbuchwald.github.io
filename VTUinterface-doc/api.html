@@ -133,6 +133,17 @@ any points in and and time within the simulation domain.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.delete_integration_point_field">
+<span class="sig-name descname"><span class="pre">delete_integration_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.delete_integration_point_field" title="Permalink to this definition"></a></dt>
+<dd><p>delete integration point field(s) and write data to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.delete_point_field">
 <span class="sig-name descname"><span class="pre">delete_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.delete_point_field" title="Permalink to this definition"></a></dt>
 <dd><p>delete point field(s) and write data to disk</p>
@@ -141,6 +152,24 @@ any points in and and time within the simulation domain.</p>
 <dd class="field-odd"><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.get_cell_field_names">
+<span class="sig-name descname"><span class="pre">get_cell_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.get_cell_field_names" title="Permalink to this definition"></a></dt>
+<dd><p>Get names of all cell fields in the vtu file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.get_integration_point_field_names">
+<span class="sig-name descname"><span class="pre">get_integration_point_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.get_integration_point_field_names" title="Permalink to this definition"></a></dt>
+<dd><p>Get names of integration point fields in the vtu file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.get_point_field_names">
+<span class="sig-name descname"><span class="pre">get_point_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.get_point_field_names" title="Permalink to this definition"></a></dt>
+<dd><p>Get names of all point fields in the vtu file.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -242,6 +271,40 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.add_cell_field">
+<span class="sig-name descname"><span class="pre">add_cell_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writefile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.add_cell_field" title="Permalink to this definition"></a></dt>
+<dd><p>Write a field (numpy array of correct size)
+to field “fieldname” as file “ofilename”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> (<cite>array</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>writefile</strong> (<cite>bool</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.add_point_field">
+<span class="sig-name descname"><span class="pre">add_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writefile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.add_point_field" title="Permalink to this definition"></a></dt>
+<dd><p>Write a field (numpy array of correct size)
+to field “fieldname” as file “ofilename”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> (<cite>array</cite>) – </p></li>
+<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>writefile</strong> (<cite>bool</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.cell_center_points">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cell_center_points</span></span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.cell_center_points" title="Permalink to this definition"></a></dt>
@@ -262,6 +325,22 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p></li>
 <li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>writefile</strong> (<cite>bool</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.delete_integration_point_field">
+<span class="sig-name descname"><span class="pre">delete_integration_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writefile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.delete_integration_point_field" title="Permalink to this definition"></a></dt>
+<dd><p>delete integration point field(s) and write data to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p></li>
+<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>writefile</strong> (<cite>bool</cite>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -276,6 +355,7 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fieldnames</strong> (<cite>str</cite> or <cite>list</cite>) – </p></li>
 <li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>writefile</strong> (<cite>bool</cite>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -365,8 +445,14 @@ by providing am array of three argument functions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_data_vtk">
-<span class="sig-name descname"><span class="pre">get_data_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_vtk" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_data_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_interpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_data_vtk" title="Permalink to this definition"></a></dt>
 <dd><p>Get interpolated data for points_interpol using vtks built-in interpolation methods</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.get_integration_point_field_names">
+<span class="sig-name descname"><span class="pre">get_integration_point_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.get_integration_point_field_names" title="Permalink to this definition"></a></dt>
+<dd><p>Get names of all integration point data fields in the vtu file.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -455,38 +541,6 @@ by providing am array of three argument functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>filename</strong> (<cite>str</cite>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.write_cell_field">
-<span class="sig-name descname"><span class="pre">write_cell_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writefile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.write_cell_field" title="Permalink to this definition"></a></dt>
-<dd><p>Write a field (numpy array of correct size)
-to field “fieldname” as file “ofilename”.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>field</strong> (<cite>array</cite>) – </p></li>
-<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
-<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.write_point_field">
-<span class="sig-name descname"><span class="pre">write_point_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writefile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.write_point_field" title="Permalink to this definition"></a></dt>
-<dd><p>Write a field (numpy array of correct size)
-to field “fieldname” as file “ofilename”.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>field</strong> (<cite>array</cite>) – </p></li>
-<li><p><strong>fieldname</strong> (<cite>str</cite>) – </p></li>
-<li><p><strong>ofilename</strong> (<cite>str</cite>) – </p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>
