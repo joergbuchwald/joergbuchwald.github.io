@@ -111,6 +111,20 @@ any points in and and time within the simulation domain.</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vtu_rename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.append" title="Permalink to this definition"></a></dt>
+<dd><p>appends entries from another PVD file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>vtu_rename</strong> (<cite>bool</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.clear_pvd_rel_path">
 <span class="sig-name descname"><span class="pre">clear_pvd_rel_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.clear_pvd_rel_path" title="Permalink to this definition"></a></dt>
 <dd><p>Delete relative directory paths in the vtu filenames of the PVD file.</p>
@@ -248,9 +262,26 @@ Also a list of fieldnames can be provided as “fieldname”</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.rename">
+<span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.rename" title="Permalink to this definition"></a></dt>
+<dd><p>Rename PVD file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newname</strong> (<cite>str</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.PVDIO.write_xdmf">
 <span class="sig-name descname"><span class="pre">write_xdmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.PVDIO.write_xdmf" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>exports data as XDMF/HDF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<cite>str</cite>) – </p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -536,11 +567,14 @@ by providing am array of three argument functions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="VTUinterface.vtuIO.VTUIO.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.write" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datamode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'appended'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VTUinterface.vtuIO.VTUIO.write" title="Permalink to this definition"></a></dt>
 <dd><p>Write data as file “filename”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<cite>str</cite>) – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<cite>str</cite>) – </p></li>
+<li><p><strong>datamode</strong> (<cite>str</cite>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
