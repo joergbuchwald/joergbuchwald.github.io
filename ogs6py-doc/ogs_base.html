@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -40,7 +41,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">ogs6py</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ogs6py.ogs</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ogs6py.ogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ogs6py.ogs.OGS"><code class="docutils literal notranslate"><span class="pre">OGS</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.add_block"><code class="docutils literal notranslate"><span class="pre">OGS.add_block()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.add_element"><code class="docutils literal notranslate"><span class="pre">OGS.add_element()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.add_include"><code class="docutils literal notranslate"><span class="pre">OGS.add_include()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.build_tree"><code class="docutils literal notranslate"><span class="pre">OGS.build_tree()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.parse_out"><code class="docutils literal notranslate"><span class="pre">OGS.parse_out()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.remove_element"><code class="docutils literal notranslate"><span class="pre">OGS.remove_element()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_block_by_include"><code class="docutils literal notranslate"><span class="pre">OGS.replace_block_by_include()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_medium_property_value"><code class="docutils literal notranslate"><span class="pre">OGS.replace_medium_property_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_mesh"><code class="docutils literal notranslate"><span class="pre">OGS.replace_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_parameter"><code class="docutils literal notranslate"><span class="pre">OGS.replace_parameter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_parameter_value"><code class="docutils literal notranslate"><span class="pre">OGS.replace_parameter_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_phase_property_value"><code class="docutils literal notranslate"><span class="pre">OGS.replace_phase_property_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.replace_text"><code class="docutils literal notranslate"><span class="pre">OGS.replace_text()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.restart"><code class="docutils literal notranslate"><span class="pre">OGS.restart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.run_model"><code class="docutils literal notranslate"><span class="pre">OGS.run_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.set"><code class="docutils literal notranslate"><span class="pre">OGS.set()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogs6py.ogs.OGS.write_input"><code class="docutils literal notranslate"><span class="pre">OGS.write_input()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="classes.html">ogs6py.classes</a></li>
@@ -154,6 +175,11 @@ attributes and anttribute values</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.build_tree">
+<span class="sig-name descname"><span class="pre">build_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.build_tree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.parse_out">
 <span class="sig-name descname"><span class="pre">parse_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.parse_out" title="Permalink to this definition"></a></dt>
 <dd><p>Parses the logfile</p>
@@ -199,8 +225,8 @@ Default: 0</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_medium_property">
-<span class="sig-name descname"><span class="pre">replace_medium_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_medium_property" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_medium_property_value">
+<span class="sig-name descname"><span class="pre">replace_medium_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_medium_property_value" title="Permalink to this definition"></a></dt>
 <dd><p>Replaces properties in medium (not belonging to any phase)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -232,8 +258,24 @@ Default: value</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_parameter">
-<span class="sig-name descname"><span class="pre">replace_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parametertype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_parameter" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parametertype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taglist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_parameter" title="Permalink to this definition"></a></dt>
 <dd><p>Replacing parametertypes and values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<cite>str</cite>) – parametername</p></li>
+<li><p><strong>parametertype</strong> (<cite>str</cite>) – parametertype</p></li>
+<li><p><strong>taglist</strong> (<cite>list</cite>) – list of tags needed for parameter spec</p></li>
+<li><p><strong>textlist</strong> (<cite>list</cite>) – values of parameter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_parameter_value">
+<span class="sig-name descname"><span class="pre">replace_parameter_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_parameter_value" title="Permalink to this definition"></a></dt>
+<dd><p>Replacing parameter values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -248,8 +290,8 @@ Default: value</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_phase_property">
-<span class="sig-name descname"><span class="pre">replace_phase_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AqueousLiquid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_phase_property" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_phase_property_value">
+<span class="sig-name descname"><span class="pre">replace_phase_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediumid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AqueousLiquid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valuetag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_phase_property_value" title="Permalink to this definition"></a></dt>
 <dd><p>Replaces properties in medium phases</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -268,7 +310,7 @@ Default: value</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ogs6py.ogs.OGS.replace_text">
-<span class="sig-name descname"><span class="pre">replace_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occurrence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_text" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occurrence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.replace_text" title="Permalink to this definition"></a></dt>
 <dd><p>General method for replacing text between opening and closing tags</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -278,6 +320,24 @@ Default: value</p></li>
 <li><p><strong>occurrence</strong> (<cite>int</cite>, optional) – Easy way to adress nonunique XPath addresses by their occurence
 from the top of the XML file
 Default: -1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.restart">
+<span class="sig-name descname"><span class="pre">restart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restart_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_restart'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_displacement</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.restart" title="Permalink to this definition"></a></dt>
+<dd><p>Prepares the project file for a restart.</p>
+<p>Takes the last time step from the PVD file mentioned in the PRJ file.
+Sets initial conditions accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>restart_suffix</strong> (<cite>str</cite>,) – suffix by which the output prefix is appended</p></li>
+<li><p><strong>t_initial</strong> (<cite>float</cite>, optional) – first time step, takes the last from previous simulation if None</p></li>
+<li><p><strong>t_end</strong> (<cite>float</cite>, optional) – last time step, the same as in previous run if None</p></li>
+<li><p><strong>zero_displacement</strong> (<cite>bolean</cite>, False) – sets the initial displacement to zero if True</p></li>
 </ul>
 </dd>
 </dl>
@@ -303,6 +363,13 @@ Singularity executable can be found</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ogs6py.ogs.OGS.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ogs6py.ogs.OGS.set" title="Permalink to this definition"></a></dt>
+<dd><p>Sets directly a uniquely defined property
+List of properties is given in the dictory below</p>
 </dd></dl>
 
 <dl class="py method">
