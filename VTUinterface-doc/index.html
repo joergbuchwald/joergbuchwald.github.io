@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VTUinterface &mdash; VTUinterface 0.67 documentation</title>
@@ -11,12 +11,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8283341e"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="contents.html" class="icon icon-home"> VTUinterface
+
+          
+          
+          <a href="contents.html" class="icon icon-home">
+            VTUinterface
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,8 +77,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="contents.html" class="icon icon-home"></a> &raquo;</li>
-      <li>VTUinterface</li>
+      <li><a href="contents.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">VTUinterface</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -90,12 +93,12 @@
 <a class="reference external image-reference" href="https://codecov.io/gh/joergbuchwald/VTUinterface"><img alt="codecov" src="https://codecov.io/gh/joergbuchwald/VTUinterface/branch/master/graph/badge.svg?token=9E1OJIJI8Z" /></a>
 <a class="reference external image-reference" href="https://doi.org/10.21105/joss.03673"><img alt="DOI" src="https://joss.theoj.org/papers/10.21105/joss.03673/status.svg" /></a>
 <section id="vtuinterface">
-<h1>VTUinterface<a class="headerlink" href="#vtuinterface" title="Permalink to this heading"></a></h1>
+<h1>VTUinterface<a class="headerlink" href="#vtuinterface" title="Link to this heading"></a></h1>
 <p>VTUinterface is a python package for easy accessing VTU/PVD files as outputed by Finite Element software like OpenGeoSys. It uses the VTK python wrapper and linear interpolation between time steps and grid points to access any points in space and time within the simulation domain.</p>
 <p>VTUinterface together with ogs6py can be viewed in action here:</p>
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=eihNKjK-I-s"><img alt="IMAGE ALT TEXT HERE" src="https://img.youtube.com/vi/eihNKjK-I-s/0.jpg" /></a>
 <section id="installation">
-<h2>0. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<h2>0. Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <p>Note: VTUinterface requires the vtk wrapper for python. Alternatively, <a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/tree/meshio">a version</a> based on <a class="reference external" href="https://github.com/nschloe/meshio">MESHIO</a> is also under development.
 clone the repository and use pip to install the package</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install [--user] https://github.com/joergbuchwald/VTUinterface/archive/refs/heads/master.zip</span>
@@ -103,14 +106,14 @@ clone the repository and use pip to install the package</p>
 </div>
 </section>
 <section id="documentation-for-vtuinterface">
-<h2>1. Documentation for VTUinterface<a class="headerlink" href="#documentation-for-vtuinterface" title="Permalink to this heading"></a></h2>
+<h2>1. Documentation for VTUinterface<a class="headerlink" href="#documentation-for-vtuinterface" title="Link to this heading"></a></h2>
 <p>You can find the documentation under <a class="reference external" href="https://joergbuchwald.github.io/VTUinterface-doc/">https://joergbuchwald.github.io/VTUinterface-doc/</a></p>
 </section>
 <section id="quick-start">
-<h2>2. Quick start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h2>
+<h2>2. Quick start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
 </section>
 <section id="caution-naming-style-of-methods-has-changed-2021-05-20">
-<h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Permalink to this heading"></a></h2>
+<h2>CAUTION: naming style of methods has changed (2021-05-20)<a class="headerlink" href="#caution-naming-style-of-methods-has-changed-2021-05-20" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_python.md">Basic Usage (python)</a></p>
 <p>Although, a python package, VTUinterface is tested to work through PyCall under julia as well:</p>
 <p><a class="reference external" href="https://github.com/joergbuchwald/VTUinterface/blob/master/README_julia.md">Basic Usage (julia)</a></p>
@@ -121,7 +124,7 @@ clone the repository and use pip to install the package</p>
 <p>from the project root directory.</p>
 </section>
 <section id="faq-troubleshooting">
-<h2>3. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permalink to this heading"></a></h2>
+<h2>3. FAQ/Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Link to this heading"></a></h2>
 <p>Installation:</p>
 <ul class="simple">
 <li><p>If the vtk whell can’t be found on PyPI you can checkout <a class="reference external" href="https://github.com/pyvista/pyvista/discussions/2064">https://github.com/pyvista/pyvista/discussions/2064</a> for unofficial wheels.</p></li>

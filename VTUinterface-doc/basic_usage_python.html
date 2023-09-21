@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1. reading a single VTU file &mdash; VTUinterface 0.67 documentation</title>
@@ -11,12 +11,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8283341e"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="contents.html" class="icon icon-home"> VTUinterface
+
+          
+          
+          <a href="contents.html" class="icon icon-home">
+            VTUinterface
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,8 +77,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="contents.html" class="icon icon-home"></a> &raquo;</li>
-      <li>1. reading a single VTU file</li>
+      <li><a href="contents.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1. reading a single VTU file</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/basic_usage_python.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,7 +89,7 @@
            <div itemprop="articleBody">
              
   <section id="reading-a-single-vtu-file">
-<h1>1. reading a single VTU file<a class="headerlink" href="#reading-a-single-vtu-file" title="Permalink to this heading"></a></h1>
+<h1>1. reading a single VTU file<a class="headerlink" href="#reading-a-single-vtu-file" title="Link to this heading"></a></h1>
 <p>A single VTU file can be accessed via:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtuIO</span>
 </pre></div>
@@ -131,7 +134,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 </pre></div>
 </div>
 <section id="creating-contour-plots">
-<h2>1.1 Creating contour plots<a class="headerlink" href="#creating-contour-plots" title="Permalink to this heading"></a></h2>
+<h2>1.1 Creating contour plots<a class="headerlink" href="#creating-contour-plots" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.tri</span> <span class="k">as</span> <span class="nn">tri</span>
 </pre></div>
@@ -153,11 +156,11 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 </div>
 <a class="reference external image-reference" href="output_17_1.png"><img alt="png" src="output_17_1.png" /></a>
 <section id="this-random-field-was-created-using-the-ranmedi-package-https-github-com-joergbuchwald-ranmedi">
-<h3><em>This random field was created using the ranmedi package:</em> <a class="reference external" href="https://github.com/joergbuchwald/ranmedi/">https://github.com/joergbuchwald/ranmedi/</a><a class="headerlink" href="#this-random-field-was-created-using-the-ranmedi-package-https-github-com-joergbuchwald-ranmedi" title="Permalink to this heading"></a></h3>
+<h3><em>This random field was created using the ranmedi package:</em> <a class="reference external" href="https://github.com/joergbuchwald/ranmedi/">https://github.com/joergbuchwald/ranmedi/</a><a class="headerlink" href="#this-random-field-was-created-using-the-ranmedi-package-https-github-com-joergbuchwald-ranmedi" title="Link to this heading"></a></h3>
 </section>
 </section>
 <section id="extracting-pointsetdata">
-<h2>1.2 Extracting Pointsetdata<a class="headerlink" href="#extracting-pointsetdata" title="Permalink to this heading"></a></h2>
+<h2>1.2 Extracting Pointsetdata<a class="headerlink" href="#extracting-pointsetdata" title="Link to this heading"></a></h2>
 <p>There are basically three interpolation methods available for extracting data at arbitrary points (<code class="docutils literal notranslate"><span class="pre">cubic</span></code> is only available for 1D and 2D). The default is <code class="docutils literal notranslate"><span class="pre">linear</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;cubic&quot;</span><span class="p">]</span>
 </pre></div>
@@ -190,7 +193,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 </section>
 </section>
 <section id="writing-vtu-files">
-<h1>2. Writing VTU files<a class="headerlink" href="#writing-vtu-files" title="Permalink to this heading"></a></h1>
+<h1>2. Writing VTU files<a class="headerlink" href="#writing-vtu-files" title="Link to this heading"></a></h1>
 <p>some simple methods also exist for adding new fields to an existing VTU file or save it separately:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vtufile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">VTUIO</span><span class="p">(</span><span class="s2">&quot;examples/square_1e2_pcs_0_ts_1_t_1.000000.vtu&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -223,7 +226,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 </div>
 </section>
 <section id="reading-time-series-data-from-pvd-files">
-<h1>3. Reading time-series data from PVD files:<a class="headerlink" href="#reading-time-series-data-from-pvd-files" title="Permalink to this heading"></a></h1>
+<h1>3. Reading time-series data from PVD files:<a class="headerlink" href="#reading-time-series-data-from-pvd-files" title="Link to this heading"></a></h1>
 <p>Similar to reading VTU files, it is possible extract time series data from a list of vtufiles given as a PVD file. For extracting grid data at arbitrary points within the mesh, there are two methods available. The stadard method is linear interpolation between cell nodes and the other is the value of the closest node:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pvdfile</span> <span class="o">=</span> <span class="n">vtuIO</span><span class="o">.</span><span class="n">PVDIO</span><span class="p">(</span><span class="s2">&quot;examples/square_1e2_pcs_0.pvd&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -259,7 +262,7 @@ Basic VTU properties, like fieldnames, points and corresponding fielddata as pro
 <a class="reference external image-reference" href="output_42_1.png"><img alt="png" src="output_42_1.png" /></a>
 </section>
 <section id="reading-point-set-data-from-pvd-files">
-<h1>4. Reading point set data from PVD files<a class="headerlink" href="#reading-point-set-data-from-pvd-files" title="Permalink to this heading"></a></h1>
+<h1>4. Reading point set data from PVD files<a class="headerlink" href="#reading-point-set-data-from-pvd-files" title="Link to this heading"></a></h1>
 <p>Define two discretized axes:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span>
 </pre></div>
